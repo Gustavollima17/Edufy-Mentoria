@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nexus de Monitoria</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logoedufy.png" alt="Edufy de Mentoria">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./home.html">Início</a></li>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="#">Mentorias</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="./login.html" class="btn-login">Login</a></li>
+                    <li><a href="#" class="cadastro-btn">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form action="#">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="options">
+                    <a href="#">Esqueceu sua senha?</a>
+                    <div class="checkbox">
+                        <input type="checkbox" id="keep-logged" name="keep-logged">
+                        <label for="keep-logged">Manter-se logado</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+            <p class="signup-link">Ainda não tem conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <ul>
+                <li><a href="#">App</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Contribua</a></li>
+            </ul>
+            <p>© 2024 SiriusProject. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

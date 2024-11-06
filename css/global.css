@@ -1,0 +1,32 @@
+* global.css */
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho padrão */
+header {
+    background-color: #0a0a0a;
+    color: #fdd701;
+    padding: 5px 0;
+    text-align: center;
+}
+
+/* global.css - Estilos globais e gerais */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
