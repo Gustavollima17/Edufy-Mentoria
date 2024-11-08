@@ -18,52 +18,77 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="./home.html">Início</a></li>
-                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./home.html"  target="_blank">Início</a></li>
+                    <li><a href="./sobre.html" target="_blank">Sobre nós</a></li>
                     <li><a href="#">Mentorias</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="./login.html" class="btn-login">Login</a></li>
+                    <li><a href="./login.html" target="_blank" class="btn-login">Login</a></li>
                     <li><a href="#" class="cadastro-btn">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
-        <div class="login-container">
-            <h1>Login</h1>
-            <form action="#">
-                <div class="input-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
-                <div class="options">
-                    <a href="#">Esqueceu sua senha?</a>
-                    <div class="checkbox">
-                        <input type="checkbox" id="keep-logged" name="keep-logged">
-                        <label for="keep-logged">Manter-se logado</label>
+    <body>
+        <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
+            <div class="login-container">
+                <h1>Login</h1>
+                <form onsubmit="return validarFormulario()">
+                    <div class="input-group">
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" required>
                     </div>
-                </div>
-                <button type="submit" class="btn-primary">Entrar</button>
-            </form>
-            <p class="signup-link">Ainda não tem conta? <a href="#">Cadastre-se</a></p>
-        </div>
-    </main>
+                    
+                    <div class="input-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+                    
+                    <div class="options">
+                        <a href="#">Esqueceu sua senha?</a>
+                        <div class="checkbox">
+                            <input type="checkbox" id="keep-logged" name="keep-logged">
+                            <label for="keep-logged">Manter-se logado</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Entrar</button>
+                </form>
+                <p class="signup-link">Ainda não tem conta? <a href="#">Cadastre-se</a></p>
+            </div>
+        </main>
 
-    <footer class="footer">
-        <div class="container">
-            <ul>
-                <li><a href="#">App</a></li>
-                <li><a href="#">Comunidade</a></li>
-                <li><a href="#">Contribua</a></li>
-            </ul>
-            <p>© 2024 SiriusProject. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
+ 
+
+  <script>
+    function validarFormulario() {
+        
+        var email = document.getElementById('email').value;
+        var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!regexEmail.test(email)) {
+            alert("Esse email não possui cadastro.");
+            return false;
+        }
+
+        
+        var senha = document.getElementById('senha').value;
+        if (senha.length < 6) {
+            alert("E-mail ou senha incorreta.");
+            return false;
+        }
+
+    
+        var regexSenha = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])([A-Za-z\d!@#$%^&*]{6,})$/;
+        if (!regexSenha.test(senha)) {
+            alert("A senha deve conter pelo menos uma letra maiúscula, um número e um caractere especial.");
+            return false;
+        }
+
+        alert("Formulário válido!");
+        return true;
+    }
+
+</script>
+
 </html>

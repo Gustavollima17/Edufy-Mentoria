@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header {
@@ -89,7 +91,7 @@ body {
 
 .nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -109,27 +111,31 @@ body {
 
 .btn-login {
     border: 1px solid #f5a623;
-    color: #ff7700;
+    color: #000000;
     background-color: #fffefd;
     margin-right: -1px;
     border-radius: 5px 0 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+    
 }
 
 .btn-login:hover {
-    background-color: #f5a623;
+    background-color: #ffffff;
     color: #fff;
 }
 
 .cadastro-btn {
     border: 1px solid #f5a623;
     background-color: #f5a623;
-    color: #fff;
+    color: #000000;
     margin-left: -80px;
     border-radius: 0 5px 5px 0;
+    transition: background-color 0.3, color o.10s ;
 }
 
 .cadastro-btn:hover {
-    background-color: #f5a623;
+    background-color: #ffffff76;
+    color: #02090a;
 }
 
 .hero {
@@ -366,161 +372,51 @@ body {
     background-color: #f5a623;
     padding: 40px 20px;
 }
-
-.about-cards .container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-cards .card {
-    background-color: #fff;
+  /* Estilo do cartão */
+  .card {
+    background-color: #222; 
+    color: #ffffff; 
+    width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.about-cards .card-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.about-cards .card-image {
-    flex: 0 0 150px;
-}
-
-.about-cards .card-image img {
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+ 
+  .card-image img {
     width: 100%;
-    max-width: 150px;
-    border-radius: 8px;
-}
+    height: 200px;
+    object-fit: cover;
+  }
+  
+ 
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .card-content h3 {
+    color: #e0e1e1; 
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .card-content p {
+    color: #cccccc; 
+    font-size: 16px;
+  }
+  
+  
+  .card:hover {
+    box-shadow: 0 0 20px rgb(0, 200, 255), 0 0 40px rgb(0, 132, 255);
+    transform: scale(1.05);
+  }
 
-.about-cards .card-content {
-    flex: 1;
-}
 
-.about-cards .card-content h3 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
-}
 
-.about-cards .card-content p {
-    margin: 10px 0 0;
-    font-size: 1em;
-    color: #666;
-}
-
-/* Estilos responsivos */
-@media (max-width: 1024px) {
-    .about .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .about .about-content h2 {
-        font-size: 2em;
-    }
-
-    .about .about-content p {
-        font-size: 1.1em;
-    }
-
-    .about .about-image {
-        flex: 0 0 auto;
-        max-width: 100%;
-    }
-
-    .about .about-image img {
-        max-width: 100%;
-    }
-
-    .about-cards .card {
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    .about-cards .card-content-wrapper {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .about {
-        padding: 30px 15px;
-    }
-
-    .about .about-content h2 {
-        font-size: 1.8em;
-    }
-
-    .about .about-content p {
-        font-size: 1em;
-    }
-
-    .about-cards {
-        padding: 30px 15px;
-    }
-
-    .about-cards .card {
-        padding: 15px;
-    }
-
-    .about-cards .card-content h3 {
-        font-size: 1.3em;
-    }
-
-    .about-cards .card-content p {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    .about {
-        padding: 20px 10px;
-    }
-
-    .about .about-content h2 {
-        font-size: 1.5em;
-    }
-
-    .about .about-content p {
-        font-size: 0.9em;
-    }
-
-    .about-cards {
-        padding: 20px 10px;
-    }
-
-    .about-cards .card {
-        padding: 10px;
-    }
-
-    .about-cards .card-content-wrapper {
-        gap: 10px;
-    }
-
-    .about-cards .card-image {
-        flex: 0 0 100px;
-    }
-
-    .about-cards .card-content h3 {
-        font-size: 1.2em;
-    }
-
-    .about-cards .card-content p {
-        font-size: 0.8em;
-    }
-}
-
-/* global.css - Estilos globais e gerais */
 footer {
     background-color: #222;
     color: #fff;

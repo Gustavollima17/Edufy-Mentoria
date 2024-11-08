@@ -55,35 +55,45 @@
             <div class="container">
                 <div class="card">
                     <div class="card-content-wrapper">
+                        
                         <div class="card-image">
                             <img src="https://images.pexels.com/photos/9159042/pexels-photo-9159042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Encontre o mentor perfeito">
                         </div>
+
                         <div class="card-content">
                             <h3>Encontre o mentor perfeito para você</h3>
                             <p>Seja você um estudante em busca de orientação acadêmica ou um profissional em transição de carreira, temos o mentor ideal para suas necessidades.</p>
                         </div>
+
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-content-wrapper">
+
                         <div class="card-image">
                             <img src="https://images.pexels.com/photos/4226256/pexels-photo-4226256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sessões ao vivo com especialistas">
                         </div>
+
                         <div class="card-content">
                             <h3>Participe de sessões ao vivo com especialistas</h3>
                             <p>Junte-se a nós e amplie seus conhecimentos enquanto interage com especialistas que estão prontos para compartilhar suas experiências e ensinamentos.</p>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-content-wrapper">
+
                         <div class="card-image">
                             <img src="https://images.pexels.com/photos/7516363/pexels-photo-7516363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Explore artigos e vídeos gratuitos">
                         </div>
+
                         <div class="card-content">
                             <h3>Explore artigos e vídeos gratuitos</h3>
                             <p>Não perca a chance de aprender diretamente com profissionais experientes!</p>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -104,4 +114,25 @@
         </div>
     </footer>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll(".card"); // Seleciona todos os elementos com a classe .card
+  
+      // Configura o observador para detectar quando o elemento entra na área visível
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show"); // Adiciona a classe 'show' para iniciar a animação
+          }
+        });
+      });
+  
+      // Observa cada cartão para detectar quando ele entra na tela
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+    });
+  </script>
+  
 </html>

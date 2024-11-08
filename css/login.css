@@ -59,7 +59,7 @@ body {
 }
 
 .btn-login:hover {
-    background-color: #f5a623;
+    background-color: #ffffff;
     color: #fff;
 }
 
@@ -69,6 +69,10 @@ body {
     color: #fff;
     margin-left: -80px;
     border-radius: 0 5px 5px 0;
+}
+.cadastro-btn:hover {
+    background-color: #ffffff;
+    color: #fff;
 }
 
 /* Responsividade */
@@ -277,7 +281,7 @@ body {
 }
 
 .login-container .btn-primary:hover {
-    background-color: #e59400;
+    background-color: #06b0ff;
 }
 
 .login-container .signup-link {
@@ -293,7 +297,7 @@ body {
 }
 
 .login-container .signup-link a:hover {
-    color: #e59400;
+    color: #06b0ff;
 }
 
 @media (max-width: 768px) {

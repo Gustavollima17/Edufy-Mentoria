@@ -3,13 +3,21 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        justify-content: center;
+        height: 100vh;
+        max-width: 1200px;
+    }      
 
 .header {
     background-color: #fff;
+    color: #333;
     padding: 5px 0;
-    border-bottom: 0px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
 }
+
 
 header .container {
     max-width: 1200px;
@@ -21,8 +29,8 @@ header .container {
 }
 
 header .logo img {
-    max-width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Manter a proporção */
+    max-width: 150px; /* Ajuste o tamanho conforme necessário */
+    margin: auto; /* Manter a proporção */
 }
 
 .nav {
@@ -66,7 +74,7 @@ header .logo img {
 }
 
 .btn-login:hover {
-    background-color: #f5a623;
+    background-color: #ffffff;
     color: #fff;
 }
 
@@ -78,7 +86,7 @@ header .logo img {
 }
 
 .btn-signup:hover {
-    background-color: #f5a623;
+    background-color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -174,8 +182,8 @@ header .logo img {
 }
 
 .banner-home-form .btn:hover {
-    background-color: #e6951e;
-    color: #ffffff;
+    background-color: #4ca2ff;
+    color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -529,10 +537,13 @@ header .logo img {
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #e6951e;
+    background-color: #00d5ff;
+    scale: 1.1;
+    transform: scale(1.1);
     color: #ffffff;
 }
 
