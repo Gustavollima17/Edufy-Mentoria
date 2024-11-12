@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus de Mentoria</title>
+    <link rel="stylesheet" href="css/cadastro2.css">
+    <link rel="stylesheet" href="css/home.css">
+
+
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logoedufy.png" alt="Edufy de Mentoria">
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./home.html">Início</a></li>
+                        <li><a href="./sobre.html">Sobre nós</a></li>
+                        <li><a href="#">Mentorias</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="./login.html" class="btn-login">Login</a></li>
+                        <li><a href="#" class="cadastro-btn">Cadastre-se</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        
+
+<section class="cadastro-section">
+    <div class="cadastro-container">
+        <h2>Cadastre-se</h2>
+        <p>Escolha o tipo de conta</p>
+
+        <div class="options-container">
+            <div class="option">
+                <label for="aluno">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3413/3413591.png" alt="Aluno">
+                    <br>Aluno
+                    <input type="checkbox" id="tutor">
+                </label>
+            </div>
+
+            <div class="option">
+                <label for="tutor">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4352/4352086.png" alt="Tutor">
+                    <br>Tutor
+                    <input type="checkbox" id="tutor">
+                </label>
+               
+            </div> 
+        </div>
+
+<p>Preencha os dados a seguir</p>
+<form id="cadastroForm">
+    <input type="text" id="nome" placeholder="Nome completo">
+    <input type="date" id="dataNascimento" placeholder="Data de nascimento">
+    <input type="email" id="email" placeholder="E-mail">
+    <div class="inline-inputs">
+        <input type="tel" id="telefone" placeholder="Telefone">
+        <input type="text" id="cpf" placeholder="CPF">
+    </div>
+    <input type="password" id="senha" placeholder="Senha">
+    <input type="password" id="confirmaSenha" placeholder="Repita a senha">
+    <label>
+        <input type="checkbox" id="termos"> Concordo com os <a href="#">Termos de Uso</a>
+    </label>
+    <br>
+    <button type="submit" class="submit-btn">Cadastrar-se</button>
+</form>
+
+        </div>
+        <article>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/724/632/small_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-png.png" class="imagem-aluno" alt="estudante">
+        </article>
+    </section>
+ 
+<br>
+
+    <div class="kodfun-galeri">
+        <div style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctkarT8WI3QNMXuI9tJW-paDEDG62qFUFfQ&s');"></div>
+        <div style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctkarT8WI3QNMXuI9tJW-paDEDG62qFUFfQ&s');"></div>
+        <div style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctkarT8WI3QNMXuI9tJW-paDEDG62qFUFfQ&s');"></div>
+        <div style="background-image: url('https://i.pinimg.com/originals/99/e9/6e/99e96ecb28c022a5e638af443e53efc7.jpg');"></div>
+        <div style="background-image: url('https://img.freepik.com/free-photo/joyful-young-bald-call-center-man-holding-book-pointing-front-isolated-orange_141793-84024.jpg?t=st=1731431250~exp=1731434850~hmac=078792185c5877308f908bbcf6e6d275a05bf88efa9c3aebf5a5076688bbfa0e&w=826');"></div>
+    </div>
+
+<br>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SiriusProject. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Início</a></li>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="#">Mentorias</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+<br>
+
+<script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const tipoContaAluno = document.getElementById('aluno');
+        const tipoContaTutor = document.getElementById('tutor');
+        const nome = document.getElementById('nome');
+        const dataNascimento = document.getElementById('dataNascimento');
+        const email = document.getElementById('email');
+        const telefone = document.getElementById('telefone');
+        const cpf = document.getElementById('cpf');
+        const senha = document.getElementById('senha');
+        const confirmaSenha = document.getElementById('confirmaSenha');
+        const termos = document.getElementById('termos');
+
+   
+        if (!nome.value.trim()) {
+            alert('Por favor, preencha o nome completo.');
+            nome.focus();
+            return;
+        }
+
+        if (!dataNascimento.value) {
+            alert('Por favor, preencha a data de nascimento.');
+            dataNascimento.focus();
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value)) {
+            alert('Por favor, insira um e-mail válido.');
+            email.focus();
+            return;
+        }
+
+        const telefoneRegex = /^\d{10,11}$/;
+        if (!telefoneRegex.test(telefone.value)) {
+            alert('Por favor, insira um telefone válido com DDD (10 ou 11 dígitos).');
+            telefone.focus();
+            return;
+        }
+
+        const cpfRegex = /^\d{11}$/;
+        if (!cpfRegex.test(cpf.value)) {
+            alert('Por favor, insira um CPF válido com 11 dígitos.');
+            cpf.focus();
+            return;
+        }
+
+        if (senha.value.length < 6) {
+            alert('A senha deve ter pelo menos 6 caracteres.');
+            senha.focus();
+            return;
+        }
+
+        if (senha.value !== confirmaSenha.value) {
+            alert('As senhas não coincidem.');
+            confirmaSenha.focus();
+            return;
+        }
+
+        if (!termos.checked) {
+            alert('Você precisa concordar com os Termos de Uso.');
+            termos.focus();
+            return;
+        }
+        if (!aluno.checked) {
+            alert('Você precisa concordar com os Termos de Uso.');
+            aluno.focus();
+            return;
+        }
+
+        alert('Formulário enviado com sucesso!');
+        // Se tudo estiver correto, você pode enviar o formulário ou realizar outras ações
+        document.getElementById('cadastroForm').submit();
+    });
+</script>
+
+</html>

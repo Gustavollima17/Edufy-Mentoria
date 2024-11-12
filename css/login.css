@@ -332,12 +332,16 @@ body {
 
 /* global.css - Estilos globais e gerais */
 footer {
-    background-color: #fff;
-    color: #f5a623;
+    background-color: #0d362d;
+    color: #fff;
     padding: 40px 0;
+    border-radius: 12px;
     font-family: 'Roboto', sans-serif;
     position: relative;
-    border-top: 2px solid #e59400;
+    overflow: hidden;
+}
+ footer .p {
+    color: #fff;
 }
 
 footer .container {

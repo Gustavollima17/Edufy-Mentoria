@@ -98,7 +98,7 @@
                 </div>
             </div>
         </section>        
-
+ <br>
     <footer>
         <div class="container">
             <p>&copy; 2024 SiriusProject. Todos os direitos reservados.</p>
@@ -114,25 +114,5 @@
         </div>
     </footer>
 </body>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const cards = document.querySelectorAll(".card"); // Seleciona todos os elementos com a classe .card
-  
-      // Configura o observador para detectar quando o elemento entra na área visível
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show"); // Adiciona a classe 'show' para iniciar a animação
-          }
-        });
-      });
-  
-      // Observa cada cartão para detectar quando ele entra na tela
-      cards.forEach((card) => {
-        observer.observe(card);
-      });
-    });
-  </script>
-  
+  <br>
 </html>

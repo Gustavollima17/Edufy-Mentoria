@@ -3,12 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        justify-content: center;
-        height: 100vh;
-        max-width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
     }      
 
 .header {
@@ -20,6 +16,7 @@ body {
 
 
 header .container {
+    border: #000000;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -217,6 +214,7 @@ header .logo img {
 .mission {
     padding: 50px 0;
     background-color: #e6951e;
+    border-radius: 12px;
 }
 
 /* Estilo do container principal */
@@ -385,6 +383,8 @@ header .logo img {
 .testimonials {
     padding: 50px 0;
     background-color: #f9f9f9;
+    
+
 }
 
 /* Estilo do container principal */
@@ -392,6 +392,7 @@ header .logo img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 /* Estilo do título da seção */
@@ -486,6 +487,7 @@ header .logo img {
     padding: 80px 20px;
     text-align: left;
     background: #f6a623;
+    border-radius: 12px;
     color: #fff;
 }
 
@@ -595,6 +597,7 @@ header .logo img {
     color: #ffffff;
     padding: 5px 0px;
     font-size: 1em;
+    border-radius: 12px;
 }
 
 /* Container principal do footer */
