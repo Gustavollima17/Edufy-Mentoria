@@ -282,6 +282,7 @@ body {
 
 .login-container .btn-primary:hover {
     background-color: #06b0ff;
+    scale: 3s;
 }
 
 .login-container .signup-link {
