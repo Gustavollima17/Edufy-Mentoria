@@ -39,12 +39,12 @@
                         <label for="email">E-mail:</label>
                         <input type="text" id="email" name="email" required>
                     </div>
-                    
+        
                     <div class="input-group">
                         <label for="senha">Senha:</label>
                         <input type="password" id="senha" name="senha" required>
                     </div>
-                    
+        
                     <div class="options">
                         <a href="#">Esqueceu sua senha?</a>
                         <div class="checkbox">
@@ -52,13 +52,13 @@
                             <label for="keep-logged">Manter-se logado</label>
                         </div>
                     </div>
-                    
+        
                     <button type="submit" class="btn-primary">Entrar</button>
                 </form>
                 <p class="signup-link">Ainda não tem conta? <a href="#">Cadastre-se</a></p>
             </div>
         </main>
-
+        
 <br>
         <footer class="footer">
             <div class="container">
@@ -75,34 +75,33 @@
             </div>
         </footer>
 <br>
-  <script>
+<script>
     function validarFormulario() {
         
-        var email = document.getElementById('email').value;
-        var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!regexEmail.test(email)) {
-            alert("Esse email não possui cadastro.");
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        
+        if (email === "") {
+            alert("Por favor, preencha o campo de e-mail.");
+            return false;
+        } else if (!regexEmail.test(email)) {
+            alert("Email ou senha incorretos!!!");
             return false;
         }
 
         
-        var senha = document.getElementById('senha').value;
-        if (senha.length < 6) {
-            alert("E-mail ou senha incorreta.");
+        if (senha === "") {
+            alert("Por favor, preencha o campo de senha.");
             return false;
         }
 
-    
-        var regexSenha = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])([A-Za-z\d!@#$%^&*]{6,})$/;
-        if (!regexSenha.test(senha)) {
-            alert("A senha deve conter pelo menos uma letra maiúscula, um número e um caractere especial.");
-            return false;
-        }
-
-        alert("Formulário válido!");
+        
         return true;
     }
-
 </script>
 
 </html>

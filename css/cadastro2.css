@@ -179,9 +179,13 @@ transition: transform 0.2s; /* Animação ao passar o mouse */
 }
 
 .imagem-aluno {
-    width: 750px;
+    width: 70px;
     height: auto;
+    position: relative;
+    padding-top: 100px ;
+    left: 50px ;
 }
+
 
 .kodfun-galeri {
     display: flex;

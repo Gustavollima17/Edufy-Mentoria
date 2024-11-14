@@ -333,7 +333,7 @@ body {
 
 /* global.css - Estilos globais e gerais */
 footer {
-    background-color: #0d362d;
+    background-color: #222;
     color: #fff;
     padding: 40px 0;
     border-radius: 12px;
@@ -341,8 +341,17 @@ footer {
     position: relative;
     overflow: hidden;
 }
- footer .p {
-    color: #fff;
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(245, 166, 35, 0.2), rgba(0, 188, 212, 0.2));
+    transform: translateX(-50%);
+    z-index: 0;
 }
 
 footer .container {
@@ -353,37 +362,66 @@ footer .container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    display: flex;
-    gap: 40px;
-}
-
-footer ul li {
-    margin: 0;
-}
-
-footer ul li a {
-    color: #f5a623;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-footer ul li a:hover {
-    color: #e59400;
+    position: relative;
+    z-index: 1;
 }
 
 footer p {
     margin: 0;
     font-size: 1em;
-    color: #666;
     line-height: 1.6;
-    margin-top: 10px;
+}
+
+footer nav {
+    margin: 20px 0;
+}
+
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer nav ul li {
+    margin: 0;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+footer nav ul li a:hover {
+    background-color: #f5a623;
+    color: #222;
+    
+}
+
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #00bcd4;
 }
 
 @media (min-width: 768px) {

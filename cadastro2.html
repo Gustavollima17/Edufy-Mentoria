@@ -17,13 +17,13 @@
                 </div>
                 <nav class="nav">
                     <ul>
-                        <li><a href="./home.html">Início</a></li>
-                        <li><a href="./sobre.html">Sobre nós</a></li>
+                        <li><a href="./home.html" target="_blank" >Início</a></li>
+                        <li><a href="./sobre.html" target="_blank">Sobre nós</a></li>
                         <li><a href="#">Mentorias</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contato</a></li>
-                        <li><a href="./login.html" class="btn-login">Login</a></li>
-                        <li><a href="/cadastro2.html" class="cadastro-btn">Cadastre-se</a></li>
+                        <li><a href="./login.html" target="_blank" class="btn-login">Login</a></li>
+                        <li><a href="/cadastro2.html" target="_blank" class="cadastro-btn">Cadastre-se</a></li>
                     </ul>
                 </nav>
             </div>
@@ -31,54 +31,58 @@
 
 
         
-
-<section class="cadastro-section">
-    <div class="cadastro-container">
-        <h2>Cadastre-se</h2>
-        <p>Escolha o tipo de conta</p>
-
-        <div class="options-container">
-            <div class="option">
-                <label for="aluno">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3413/3413591.png" alt="Aluno">
+        <section class="cadastro-section">
+            <div class="cadastro-container">
+              <h2>Cadastre-se</h2>
+              <p>Escolha o tipo de conta</p>
+          
+              <div class="options-container">
+                <div class="option">
+                  <label for="aluno">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3413/3413591.png" alt="Aluno" class="form-image">
                     <br>Aluno
-                    <input type="checkbox" id="tutor">
-                </label>
+                    <input href="" type="radio" name="tipoConta" id="aluno" onclick="toggleFields('aluno')" required>
+                  </label>
+                </div>
+          
+                <div class="option">
+                  <label for="tutor">
+                    <img src="https://www.freeiconspng.com/thumbs/training-icon/leadership-training-icon-1.png" alt="Tutor" class="form-image">
+                    <br>Tutor
+                    <input type="radio" name="tipoConta" id="tutor" onclick="toggleFields('tutor')" required>
+                  </label>
+                </div>
+              </div>
+          
+              <p>Preencha os dados a seguir</p>
+          
+              <form id="cadastroForm" onsubmit="return validateForm()">
+                <input type="text" id="nome" placeholder="Nome completo" required>
+                <input type="date" id="dataNascimento" placeholder="Data de nascimento" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <div class="inline-inputs">
+                  <input type="tel" id="telefone" placeholder="Telefone" required>
+                  <input type="text" id="cpf" placeholder="CPF" required>
+                </div>
+                <input type="text" id="nivelFormacao" placeholder="Nível de formação" style="display: none;">
+                <input type="text" id="instituicaoFormacao" placeholder="Instituição de formação" style="display: none;">
+                <input type="text" id="curso" placeholder="Curso" style="display: none;">
+                <input type="password" id="senha" placeholder="Senha" required>
+                <input type="password" id="confirmaSenha" placeholder="Repita a senha" required>
+                <div>
+                  <input type="checkbox" id="termos" required> Concordo com os <a href="#">Termos de Uso</a>
+                </div>
+                <button type="submit" class="submit-btn">Cadastrar-se</button>
+              </form>
             </div>
 
-            <div class="option">
-                <label for="tutor">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4352/4352086.png" alt="Tutor">
-                    <br>Tutor
-                    <input type="checkbox" id="tutor">
-                </label>
-               
-            </div> 
-        </div>
+              <article>
+                <img id="imagemTipoConta" src="https://static.vecteezy.com/system/resources/thumbnails/024/724/632/small_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-png.png" class="imagem-aluno" alt="estudante">
+              </article>
+          
+          </section>
 
-<p>Preencha os dados a seguir</p>
-<form id="cadastroForm">
-    <input type="text" id="nome" placeholder="Nome completo">
-    <input type="date" id="dataNascimento" placeholder="Data de nascimento">
-    <input type="email" id="email" placeholder="E-mail">
-    <div class="inline-inputs">
-        <input type="tel" id="telefone" placeholder="Telefone">
-        <input type="text" id="cpf" placeholder="CPF">
-    </div>
-    <input type="password" id="senha" placeholder="Senha">
-    <input type="password" id="confirmaSenha" placeholder="Repita a senha">
-    <label>
-        <input type="checkbox" id="termos"> Concordo com os <a href="#">Termos de Uso</a>
-    </label>
-    <br>
-    <button type="submit" class="submit-btn">Cadastrar-se</button>
-</form>
 
-        </div>
-        <article>
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/724/632/small_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-png.png" class="imagem-aluno" alt="estudante">
-        </article>
-    </section>
  
 <br>
 
@@ -110,81 +114,60 @@
 <br>
 
 <script>
-    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-
-        const tipoContaAluno = document.getElementById('aluno');
-        const tipoContaTutor = document.getElementById('tutor');
-        const nome = document.getElementById('nome');
-        const dataNascimento = document.getElementById('dataNascimento');
-        const email = document.getElementById('email');
-        const telefone = document.getElementById('telefone');
-        const cpf = document.getElementById('cpf');
-        const senha = document.getElementById('senha');
-        const confirmaSenha = document.getElementById('confirmaSenha');
-        const termos = document.getElementById('termos');
-
-   
-        if (!nome.value.trim()) {
-            alert('Por favor, preencha o nome completo.');
-            nome.focus();
-            return;
-        }
-
-        if (!dataNascimento.value) {
-            alert('Por favor, preencha a data de nascimento.');
-            dataNascimento.focus();
-            return;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email.value)) {
-            alert('Por favor, insira um e-mail válido.');
-            email.focus();
-            return;
-        }
-
-        const telefoneRegex = /^\d{10,11}$/;
-        if (!telefoneRegex.test(telefone.value)) {
-            alert('Por favor, insira um telefone válido com DDD (10 ou 11 dígitos).');
-            telefone.focus();
-            return;
-        }
-
-        const cpfRegex = /^\d{11}$/;
-        if (!cpfRegex.test(cpf.value)) {
-            alert('Por favor, insira um CPF válido com 11 dígitos.');
-            cpf.focus();
-            return;
-        }
-
-        if (senha.value.length < 6) {
-            alert('A senha deve ter pelo menos 6 caracteres.');
-            senha.focus();
-            return;
-        }
-
-        if (senha.value !== confirmaSenha.value) {
-            alert('As senhas não coincidem.');
-            confirmaSenha.focus();
-            return;
-        }
-
-        if (!termos.checked) {
-            alert('Você precisa concordar com os Termos de Uso.');
-            termos.focus();
-            return;
-        }
-        if (!aluno.checked) {
-            alert('Você precisa concordar com os Termos de Uso.');
-            aluno.focus();
-            return;
-        }
-
-        alert('Formulário enviado com sucesso!');
-        // Se tudo estiver correto, você pode enviar o formulário ou realizar outras ações
-        document.getElementById('cadastroForm').submit();
+    function toggleFields(tipoConta) {
+      // Campos comuns
+      document.getElementById("nome").style.display = "block";
+      document.getElementById("dataNascimento").style.display = "block";
+      document.getElementById("email").style.display = "block";
+      document.getElementById("telefone").style.display = "block";
+      document.getElementById("cpf").style.display = "block";
+      document.getElementById("senha").style.display = "block";
+      document.getElementById("confirmaSenha").style.display = "block";
+  
+      // Campos específicos para Tutor
+      const isTutor = tipoConta === 'tutor';
+      document.getElementById("nivelFormacao").style.display = isTutor ? "block" : "none";
+      document.getElementById("instituicaoFormacao").style.display = isTutor ? "block" : "none";
+      document.getElementById("curso").style.display = isTutor ? "block" : "none";
+  
+      // Trocar imagem com base na seleção
+      const imagemTipoConta = document.getElementById("imagemTipoConta");
+      if (isTutor) {
+        imagemTipoConta.src = "https://parspng.com/wp-content/uploads/2023/10/teacherpng.parspng.com-2.png";
+        imagemTipoConta.alt = "tutor";
+        imagemTipoConta.style.width = "400px";
+      } else {
+        imagemTipoConta.src = "https://static.vecteezy.com/system/resources/thumbnails/024/724/632/small_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-png.png";
+        imagemTipoConta.alt = "estudante";
+        imagemTipoConta.style.width = "780px";
+      }
+    }
+  
+    // Inicializar formulário com campos do Aluno visíveis
+    document.addEventListener("DOMContentLoaded", () => {
+      toggleFields('aluno');
     });
-</script>
+  
+    // Função de validação adicional
+    function validateForm() {
+      const tipoContaAluno = document.getElementById("aluno").checked;
+      const tipoContaTutor = document.getElementById("tutor").checked;
+      
+      if (!tipoContaAluno && !tipoContaTutor) {
+        alert("Por favor, selecione uma opção de conta (Aluno ou Tutor).");
+        return false;
+      }
+      
+      const senha = document.getElementById("senha").value;
+      const confirmaSenha = document.getElementById("confirmaSenha").value;
+      
+      if (senha !== confirmaSenha) {
+        alert("As senhas não coincidem. Por favor, verifique.");
+        return false;
+      }
+  
+      return true;
+    }
+  </script>
 
 </html>
