@@ -56,7 +56,7 @@
           
               <p>Preencha os dados a seguir</p>
           
-              <form id="cadastroForm" onsubmit="return validateForm()">
+              <form id="cadastroForm" action="processa_cadastro.php" method="POST" onsubmit="return validateForm()">
                 <input type="text" id="nome" placeholder="Nome completo" required>
                 <input type="date" id="dataNascimento" placeholder="Data de nascimento" required>
                 <input type="email" id="email" placeholder="E-mail" required>
@@ -115,7 +115,7 @@
 
 <script>
     function toggleFields(tipoConta) {
-      // Campos comuns
+      
       document.getElementById("nome").style.display = "block";
       document.getElementById("dataNascimento").style.display = "block";
       document.getElementById("email").style.display = "block";
@@ -124,13 +124,13 @@
       document.getElementById("senha").style.display = "block";
       document.getElementById("confirmaSenha").style.display = "block";
   
-      // Campos específicos para Tutor
+      
       const isTutor = tipoConta === 'tutor';
       document.getElementById("nivelFormacao").style.display = isTutor ? "block" : "none";
       document.getElementById("instituicaoFormacao").style.display = isTutor ? "block" : "none";
       document.getElementById("curso").style.display = isTutor ? "block" : "none";
   
-      // Trocar imagem com base na seleção
+      
       const imagemTipoConta = document.getElementById("imagemTipoConta");
       if (isTutor) {
         imagemTipoConta.src = "https://parspng.com/wp-content/uploads/2023/10/teacherpng.parspng.com-2.png";
@@ -143,12 +143,12 @@
       }
     }
   
-    // Inicializar formulário com campos do Aluno visíveis
+    
     document.addEventListener("DOMContentLoaded", () => {
       toggleFields('aluno');
     });
   
-    // Função de validação adicional
+    
     function validateForm() {
       const tipoContaAluno = document.getElementById("aluno").checked;
       const tipoContaTutor = document.getElementById("tutor").checked;
