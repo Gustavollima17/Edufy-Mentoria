@@ -1,33 +1,32 @@
-* global.css */
-
-/* Estilos globais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Cabeçalho padrão */
-header {
-    background-color: #0a0a0a;
-    color: #fdd701;
-    padding: 5px 0;
-    text-align: center;
-}
-
-
-/* global.css - Estilos globais e gerais */
 footer {
     background-color: #333;
     color: #fff;
+    text-align: center;
     padding: 20px 0;
-    font-family: Arial, sans-serif;
+    margin-top: 40px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
 }
 
 footer p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.95rem;
+    color: #ddd;
 }
 
+footer a {
+    color: #fdd701;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
+footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+}
