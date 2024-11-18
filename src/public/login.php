@@ -18,13 +18,13 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="./home.html"  target="_blank">Início</a></li>
-                    <li><a href="./sobre.html" target="_blank">Sobre nós</a></li>
+                    <li><a href="./index.php"  target="_blank">Início</a></li>
+                    <li><a href="./sobre.php" target="_blank">Sobre nós</a></li>
                     <li><a href="#">Mentorias</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="./login.html" target="_blank" class="btn-login">Login</a></li>
-                    <li><a href="/cadastro2.html" class="cadastro-btn">Cadastre-se</a></li>
+                    <li><a href="./login.php" target="_blank" class="btn-login">Login</a></li>
+                    <li><a href="/cadastro.php" class="cadastro-btn">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>

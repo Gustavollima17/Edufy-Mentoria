@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus de Mentoria</title>
-    <link rel="stylesheet" href="css/cadastro2.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/home.css">
 
 
@@ -17,13 +17,13 @@
                 </div>
                 <nav class="nav">
                     <ul>
-                        <li><a href="./home.html" target="_blank" >Início</a></li>
-                        <li><a href="./sobre.html" target="_blank">Sobre nós</a></li>
+                        <li><a href="./index.php" target="_blank" >Início</a></li>
+                        <li><a href="./sobre.php" target="_blank">Sobre nós</a></li>
                         <li><a href="#">Mentorias</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contato</a></li>
-                        <li><a href="./login.html" target="_blank" class="btn-login">Login</a></li>
-                        <li><a href="/cadastro2.html" target="_blank" class="cadastro-btn">Cadastre-se</a></li>
+                        <li><a href="./login.php" target="_blank" class="btn-login">Login</a></li>
+                        <li><a href="/cadastro.php" target="_blank" class="cadastro-btn">Cadastre-se</a></li>
                     </ul>
                 </nav>
             </div>
@@ -100,7 +100,7 @@
             <p>&copy; 2024 SiriusProject. Todos os direitos reservados.</p>
             <nav>
                 <ul>
-                    <li><a href="./home.html">Início</a></li>
+                    <li><a href="./index.php">Início</a></li>
                     <li><a href="./sobre.html">Sobre nós</a></li>
                     <li><a href="#">Mentorias</a></li>
                     <li><a href="#">Blog</a></li>
