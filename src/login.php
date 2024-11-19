@@ -34,7 +34,7 @@
         <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
             <div class="login-container">
                 <h1>Login</h1>
-                <form onsubmit="return validarFormulario()">
+                <form action="processarLogin.php" method="POST" onsubmit="return validarFormulario()">
                     <div class="input-group">
                         <label for="email">E-mail:</label>
                         <input type="text" id="email" name="email" required>

@@ -45,6 +45,14 @@ class UsuarioRepositorio {
         $stmt->execute();
         return $this->conexao->lastInsertId();
     }
+
+    public function obterUsuarioPorEmail($email) {
+        $sql = "SELECT * FROM usuarios WHERE email = :email";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(':email', $email);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 
 // Processamento do formulário

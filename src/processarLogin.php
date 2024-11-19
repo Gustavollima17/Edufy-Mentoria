@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/usuario.php';
+require_once __DIR__ . '/back-end/usuarioRepositorio.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -30,4 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     header("Location: login.php");
     exit();
-}
+} 
