@@ -16,8 +16,8 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="./home.html">Início</a></li>
-                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./index.php">Início</a></li>
+                    <li><a href="./sobre.php">Sobre nós</a></li>
                     <li><a href="#">Mentorias</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contato</a></li>
