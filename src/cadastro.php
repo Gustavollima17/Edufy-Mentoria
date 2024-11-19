@@ -56,7 +56,7 @@
           
               <p>Preencha os dados a seguir</p>
           
-              <form id="cadastroForm" action="processa_cadastro.php" method="POST" onsubmit="return validateForm()">
+              <form id="cadastroForm" action="../back-end/cadastroService" method="POST" onsubmit="return validateForm()">
                 <input type="text" id="nome" placeholder="Nome completo" required>
                 <input type="date" id="dataNascimento" placeholder="Data de nascimento" required>
                 <input type="email" id="email" placeholder="E-mail" required>
