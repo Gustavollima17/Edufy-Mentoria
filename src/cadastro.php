@@ -56,19 +56,19 @@
           
               <p>Preencha os dados a seguir</p>
           
-              <form id="cadastroForm" action="../back-end/cadastroService" method="POST" onsubmit="return validateForm()">
-                <input type="text" id="nome" placeholder="Nome completo" required>
-                <input type="date" id="dataNascimento" placeholder="Data de nascimento" required>
-                <input type="email" id="email" placeholder="E-mail" required>
+              <form id="cadastroForm" action="processarCadastro.php" method="POST" onsubmit="return validateForm()">
+                <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                <input type="date" id="dataNascimento" name="data_nascimento" placeholder="Data de nascimento" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
                 <div class="inline-inputs">
-                  <input type="tel" id="telefone" placeholder="Telefone" required>
-                  <input type="text" id="cpf" placeholder="CPF" required>
+                  <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                  <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
                 </div>
-                <input type="text" id="nivelFormacao" placeholder="Nível de formação" style="display: none;">
-                <input type="text" id="instituicaoFormacao" placeholder="Instituição de formação" style="display: none;">
-                <input type="text" id="curso" placeholder="Curso" style="display: none;">
-                <input type="password" id="senha" placeholder="Senha" required>
-                <input type="password" id="confirmaSenha" placeholder="Repita a senha" required>
+                <input type="text" id="nivelFormacao" name="nivel_formacao" placeholder="Nível de formação" style="display: none;">
+                <input type="text" id="instituicaoFormacao" name="instituicao_formacao" placeholder="Instituição de formação" style="display: none;">
+                <input type="text" id="curso" name="curso" placeholder="Curso" style="display: none;">
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <input type="password" id="confirmaSenha" name="confirma_senha" placeholder="Repita a senha" required>
                 <div>
                   <input type="checkbox" id="termos" required> Concordo com os <a href="#">Termos de Uso</a>
                 </div>
