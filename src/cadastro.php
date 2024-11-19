@@ -13,8 +13,28 @@
     <section class="cadastro-section">
         <div class="cadastro-container">
             <h2>Cadastre-se</h2>
+            <p>Escolha o tipo de conta</p>
+            <!-- Seleção do tipo de conta -->
+            <div class="options-container">
+                <div class="option">
+                    <label for="aluno">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3413/3413591.png" alt="Aluno" class="form-image">
+                        <br>Aluno
+                        <input type="radio" name="tipoConta" id="aluno" onclick="toggleFields('aluno')" required>
+                    </label>
+                </div>
+                <div class="option">
+                    <label for="tutor">
+                        <img src="https://www.freeiconspng.com/thumbs/training-icon/leadership-training-icon-1.png" alt="Tutor" class="form-image">
+                        <br>Tutor
+                        <input type="radio" name="tipoConta" id="tutor" onclick="toggleFields('tutor')" required>
+                    </label>
+                </div>
+            </div>
             <p>Preencha os dados abaixo</p>
-            <form id="cadastroForm" action="processa_cadastro.php" method="POST">
+
+            <form id="cadastroForm" action="processa_cadastro.php" method="POST" onsubmit="return validateForm()">
+                <!-- Campos comuns -->
                 <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
                 <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento" required>
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
@@ -59,6 +79,13 @@
                     </select>
                     <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
                 </div>
+
+                <!-- Campos específicos do Tutor -->
+                <input type="text" id="nivelFormacao" name="nivelFormacao" placeholder="Nível de formação" style="display: none;">
+                <input type="text" id="instituicaoFormacao" name="instituicaoFormacao" placeholder="Instituição de formação" style="display: none;">
+                <input type="text" id="curso" name="curso" placeholder="Curso" style="display: none;">
+
+                <!-- Campos de senha -->
                 <input type="password" id="senha" name="senha" placeholder="Senha" required>
                 <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Repita a senha" required>
                 <div>
@@ -70,5 +97,42 @@
     </section>
 
     <?php include 'footer.php'; ?>
+
+    <script>
+        function toggleFields(tipoConta) {
+            // Exibir ou ocultar campos específicos do Tutor
+            const isTutor = tipoConta === 'tutor';
+            document.getElementById("nivelFormacao").style.display = isTutor ? "block" : "none";
+            document.getElementById("instituicaoFormacao").style.display = isTutor ? "block" : "none";
+            document.getElementById("curso").style.display = isTutor ? "block" : "none";
+        }
+
+        function validateForm() {
+            // Verificar se o tipo de conta foi selecionado
+            const tipoContaAluno = document.getElementById("aluno").checked;
+            const tipoContaTutor = document.getElementById("tutor").checked;
+
+            if (!tipoContaAluno && !tipoContaTutor) {
+                alert("Por favor, selecione um tipo de conta (Aluno ou Tutor).");
+                return false;
+            }
+
+            // Verificar se as senhas coincidem
+            const senha = document.getElementById("senha").value;
+            const confirmaSenha = document.getElementById("confirmaSenha").value;
+
+            if (senha !== confirmaSenha) {
+                alert("As senhas não coincidem. Por favor, tente novamente.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Exibir os campos padrão para "Aluno" ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+            toggleFields('aluno');
+        });
+    </script>
 </body>
 </html>
