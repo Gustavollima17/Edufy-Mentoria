@@ -13,45 +13,6 @@
 <body>
     <?php include 'header.php'; ?>
 
-<<<<<<< HEAD
-    <body>
-        <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
-            <div class="login-container">
-                <h1>Login</h1>
-                <form action="processarLogin.php" method="POST" onsubmit="return validarFormulario()">
-                    <div class="input-group">
-                        <label for="email">E-mail:</label>
-                        <input type="text" id="email" name="email" required>
-                    </div>
-        
-                    <div class="input-group">
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" required>
-                    </div>
-        
-                    <div class="options">
-                        <a href="#">Esqueceu sua senha?</a>
-                        <div class="checkbox">
-                            <input type="checkbox" id="keep-logged" name="keep-logged">
-                            <label for="keep-logged">Manter-se logado</label>
-                        </div>
-                    </div>
-        
-                    <button type="submit" class="btn-primary">Entrar</button>
-                </form>
-                <p class="signup-link">Ainda não tem conta? <a href="#">Cadastre-se</a></p>
-            </div>
-        </main>
-        
-<br>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <a href="#">App</a>
-                        <a href="#">Comunidade</a>
-                        <a href="#">Contribua</a>
-=======
     <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
         <div class="login-container">
             <h1>Login</h1>
@@ -71,7 +32,6 @@
                     <div class="checkbox">
                         <input type="checkbox" id="keep-logged" name="keep-logged">
                         <label for="keep-logged">Manter-se logado</label>
->>>>>>> f1581685e60b3243e772365475e73fd3a41e590f
                     </div>
                 </div>
     
