@@ -11,25 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="images/logoedufy.png" alt="Edufy de Mentoria">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="./index.php"  target="_blank">Início</a></li>
-                    <li><a href="./sobre.php" target="_blank">Sobre nós</a></li>
-                    <li><a href="#">Mentorias</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="./login.php" target="_blank" class="btn-login">Login</a></li>
-                    <li><a href="/cadastro.php" class="cadastro-btn">Cadastre-se</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
 
+<<<<<<< HEAD
     <body>
         <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
             <div class="login-container">
@@ -67,24 +51,45 @@
                         <a href="#">App</a>
                         <a href="#">Comunidade</a>
                         <a href="#">Contribua</a>
+=======
+    <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form onsubmit="return validarFormulario()">
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+    
+                <div class="options">
+                    <a href="#">Esqueceu sua senha?</a>
+                    <div class="checkbox">
+                        <input type="checkbox" id="keep-logged" name="keep-logged">
+                        <label for="keep-logged">Manter-se logado</label>
+>>>>>>> f1581685e60b3243e772365475e73fd3a41e590f
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>© 2024 SiriusProject. Todos os direitos reservados.</p>
-                </div>
-            </div>
-        </footer>
-<br>
+    
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+            <p class="signup-link">Ainda não tem conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </main>
+
+    <?php include 'footer.php'; ?>
+
 <script>
     function validarFormulario() {
-        
         const email = document.getElementById("email").value;
         const senha = document.getElementById("senha").value;
 
-        
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        
         if (email === "") {
             alert("Por favor, preencha o campo de e-mail.");
             return false;
@@ -93,15 +98,13 @@
             return false;
         }
 
-        
         if (senha === "") {
             alert("Por favor, preencha o campo de senha.");
             return false;
         }
 
-        
         return true;
     }
 </script>
-
+</body>
 </html>

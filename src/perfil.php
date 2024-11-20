@@ -7,24 +7,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
-<body>
     <!-- Cabeçalho global -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="images/logoedufy.png" alt="Nexus de Mentoria">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="./index.php">Início</a></li>
-                    <li><a href="./sobre.php">Sobre nós</a></li>
-                    <li><a href="#">Mentorias</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
 
     <!-- Conteúdo principal -->
     <main class="perfil-container">
@@ -98,5 +82,7 @@
             document.getElementById("user-image").src = userData.picture;
         });
     </script>
+
+    <?php include 'footer.php'; ?>
 </body>
 </html>

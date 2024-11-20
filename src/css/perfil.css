@@ -14,30 +14,6 @@ body {
 }
 
 /* Cabeçalho */
-.header {
-    background-color: #ff7300;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.header .logo img {
-    width: 150px;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
 
 /* Container principal */
 .perfil-container {
@@ -94,10 +70,3 @@ body {
 }
 
 /* Rodapé */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
