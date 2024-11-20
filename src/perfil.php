@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
- <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul><body>
     <!-- Cabeçalho global -->
     <?php include 'header.php'; ?>
 

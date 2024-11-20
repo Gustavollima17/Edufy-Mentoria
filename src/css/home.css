@@ -96,7 +96,7 @@ body {
 
 
 .hero .btn.saiba-mais:hover {
-    background-color: #23d9f5;
+    background-color: #f5a623;
     color: #ffffff;;
     scale: 1.1;
     transform: scale(1.1);
@@ -288,7 +288,7 @@ body {
   
   
   .card:hover {
-    box-shadow: 0 0 20px rgb(0, 200, 255), 0 0 40px rgb(0, 132, 255);
+    box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255);
     transform: scale(1.05);
   }
 
