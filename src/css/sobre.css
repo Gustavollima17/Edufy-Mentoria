@@ -82,8 +82,8 @@ body {
 }
 
 .banner-home-form .btn:hover {
-    background-color: #4ca2ff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -196,56 +196,100 @@ body {
     }
 }
 
-/* Container geral da seção de impacto */
-.impact {
-    padding: 50px 0;
-    background-color: #ffffff;
+/* Estilo da seção */
+section.impact {
+    background-color: #dbdbdb; /* Fundo claro */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
 }
-
-/* Estilo do container principal */
-.impact .container {
+/* Centralizar o conteúdo */
+section.impact .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Estilo do título da seção */
-.impact h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.impact h2 .highlight {
-    color: #f6a623;
-}
-
-/* Container das estatísticas de impacto */
-.impact-stats {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    text-align: center;
+    flex-direction: column; /* Garante que o conteúdo fique empilhado verticalmente */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
 }
 
-/* Estilo individual de cada estatística */
-.stat {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: calc(33% - 20px);
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-.stat h3 {
+/* Estilo do título */
+section.impact h2 {
+    color: #333;
     font-size: 2em;
-    color: #f6a623;
+    margin-bottom: 30px;
+}
+
+/* Destaque no título */
+section.impact .highlight {
+    color: #f6a623; /* Azul como destaque */
+    font-weight: bold;
+}
+
+/* Container dos stats */
+section.impact .impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 90px; /* Espaçamento entre os elementos */
+    flex-wrap: wrap; /* Permitir quebra de linha para dispositivos menores */
+    margin-top: 20px;
+}
+
+/* Card de cada stat */
+section.impact .stat {
+    background-color: #f6a623;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Largura fixa */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+/* Títulos dentro dos stats */
+section.impact .stat h3 {
+    font-size: 2em;
+    color: #000000; /* Azul */
     margin-bottom: 10px;
 }
+
+/* Descrição dos stats */
+section.impact .stat-description {
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    section.impact .impact-stats {
+        flex-direction: column; /* Empilhar os stats verticalmente */
+        align-items: center;
+    }
+
+    section.impact .stat {
+        width: 100%; /* Ajustar largura para ocupar o container */
+        max-width: 300px; /* Limite máximo para largura */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .stat-description {
     font-size: 1em;
@@ -270,14 +314,72 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .impact h2 {
-        font-size: 2em;
+
+
+
+
+
+/* Estilo da seção */
+section.testimonials {
+    padding: 40px 20px;
+    background-color: #dbdbdb;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do container */
+.testimonials .container {
+    max-width: 1200px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Garante que o conteúdo fique empilhado verticalmente */
+    align-items: center; 
+}
+
+/* Estilo do título */
+.testimonials h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px; /* Espaço entre o título e os depoimentos */
+}
+
+/* Destaque na palavra "mentorados" */
+.testimonials .highlight {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Estilo do container de depoimentos */
+.testimonials .testimonials-container {
+    display: flex;
+    justify-content: 50px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 90px; /* Espaço entre os cards */
+}
+
+/* Estilo de cada depoimento */
+.testimonials .testimonial {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Largura fixa */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .testimonials .testimonials-container {
+        flex-direction: column; /* Empilha os depoimentos verticalmente */
+        align-items: center;
     }
-    .stat h3 {
-        font-size: 1.5em;
-    }
-    .stat-description {
-        font-size: 0.9em;
+
+    .testimonials .testimonial {
+        width: 100%; /* Ocupa a largura total */
+        max-width: 400px;
     }
 }
+

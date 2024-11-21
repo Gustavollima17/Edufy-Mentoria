@@ -11,7 +11,7 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="./login.php" class="btn-login">Login</a></li>
-                <li><a href="/cadastro.php" class="cadastro-btn">Cadastre-se</a></li>
+                <li><a href="./cadastro.php" class="cadastro-btn">Cadastre-se</a></li>
             </ul>
         </nav>
     </div>
