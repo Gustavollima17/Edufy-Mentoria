@@ -1,33 +1,34 @@
 <?php
-require_once __DIR__ . '/usuario.php';
+require_once 'usuario.php'; // Certifique-se de incluir a classe Usuario
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+class Instrutor extends Usuario {
+    private $nivelFormacao; // Corrigido o nome da variável
+    private $instituicao; // Corrigido o nome da variável
+    private $curso;
 
-    $repository = new UsuarioRepositorio();
-
-    try {
-        // Obter usuário pelo e-mail
-        $usuario = $repository->obterUsuarioPorEmail($email);
-
-        if ($usuario && password_verify($senha, $usuario['senha'])) {
-            // Login bem-sucedido
-            session_start();
-            $_SESSION['usuario_id'] = $usuario['id'];
-            $_SESSION['usuario_nome'] = $usuario['nome'];
-            header("Location: dashboard.php");
-            exit();
-        } else {
-            // Falha no login
-            header("Location: login.php?status=erro&mensagem=" . urlencode("Email ou senha incorretos."));
-            exit();
-        }
-    } catch (Exception $e) {
-        header("Location: login.php?status=erro&mensagem=" . urlencode($e->getMessage()));
-        exit();
+    // Getters
+    public function getNivelFormacao() {
+        return $this->nivelFormacao;
     }
-} else {
-    header("Location: login.php");
-    exit();
+
+    public function getInstituicao() {
+        return $this->instituicao;
+    }
+
+    public function getCurso() {
+        return $this->curso;
+    }
+
+    // Setters
+    public function setNivelFormacao($nivelFormacao) {
+        $this->nivelFormacao = $nivelFormacao;
+    }
+
+    public function setInstituicao($instituicao) {
+        $this->instituicao = $instituicao;
+    }
+
+    public function setCurso($curso) {
+        $this->curso = $curso;
+    }
 }
