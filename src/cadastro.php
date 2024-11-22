@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
+
 <body>
     <?php include 'header.php'; ?>
 
@@ -34,6 +36,7 @@
             <p>Preencha os dados abaixo</p>
 
             <form id="cadastroForm" action="processa_cadastro.php" method="POST" onsubmit="return validateForm()">
+                <input type="hidden" name="tipoConta" id="tipoContaHidden" value="">
                 <!-- Campos comuns -->
                 <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
                 <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento" required>
@@ -101,6 +104,8 @@
     <script>
         function toggleFields(tipoConta) {
             // Exibir ou ocultar campos específicos do Tutor
+            document.getElementById("tipoContaHidden").value = tipoConta;
+
             const isTutor = tipoConta === 'tutor';
             document.getElementById("nivelFormacao").style.display = isTutor ? "block" : "none";
             document.getElementById("instituicaoFormacao").style.display = isTutor ? "block" : "none";
@@ -125,7 +130,8 @@
                 alert("As senhas não coincidem. Por favor, tente novamente.");
                 return false;
             }
-
+            console.log(tipoContaAluno)
+            console.log(tipoContaTutor)
             return true;
         }
 
@@ -135,4 +141,5 @@
         });
     </script>
 </body>
+
 </html>
