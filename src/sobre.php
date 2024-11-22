@@ -120,5 +120,6 @@
     </section>
  <br>
     <?php include 'footer.php'; ?> <!-- Inclui o rodapé -->
+    <BR>
 </body>
 </html>
