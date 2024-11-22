@@ -13,7 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include 'header.php'; ?> <!-- Inclui o cabeçalho -->
+    <header>
+        <?php include 'header.php'; ?>
+    </header>
 
     <section class="banner-home" style="background: url('https://www.unimestre.com/wp-content/uploads/2019/10/estudante_computador_portal-1024x682.jpg') no-repeat center center/cover;">
         <div class="container">
@@ -104,6 +106,10 @@
         </div>
     </section>
 
-    <?php include 'footer.php'; ?> <!-- Inclui o rodapé -->
+    <!-- Rodapé global -->
+    <footer>
+    <?php include 'footer.php'; ?>
+    </footer>
+    
 </body>
 </html>

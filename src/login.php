@@ -19,7 +19,9 @@ if(isset($_SESSION['usuario_id'])) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <header>
+        <?php include 'header.php'; ?>
+    </header>
 
     <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
         <div class="login-container">
@@ -57,7 +59,10 @@ if(isset($_SESSION['usuario_id'])) {
         </div>
     </main>
 
+    <!-- Rodapé global -->
+    <footer>
     <?php include 'footer.php'; ?>
+    </footer>
 
     <script>
         function validarFormulario() {

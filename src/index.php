@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
     <body>
+
+    <header>
         <?php include 'header.php'; ?>
+    </header>
     
         <section class="hero" style="background: url('https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg') no-repeat center center/cover;">
             <div class="container">
@@ -83,7 +86,10 @@
         </section>        
  <br>
     
+ <!-- Rodapé global -->
+    <footer>
     <?php include 'footer.php'; ?>
+    </footer>
     
 </body>
   <br>
