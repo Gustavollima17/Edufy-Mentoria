@@ -82,7 +82,5 @@
             document.getElementById("user-image").src = userData.picture;
         });
     </script>
-
-    <?php include 'footer.php'; ?>
 </body>
 </html>
