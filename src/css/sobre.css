@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
-}      
+}
 
 /* Container geral da seção banner-home */
 .banner-home {
@@ -17,7 +17,7 @@ body {
     background-position: center;
     text-align: center;
 }
- 
+
 /* Container principal do banner-home */
 .banner-home .container {
     max-width: 1200px;
@@ -90,12 +90,15 @@ body {
     .banner-home {
         padding: 150px 15px;
     }
+
     .banner-home-text h1 {
         font-size: 2.5em;
     }
+
     .banner-home-text p {
         font-size: 1em;
     }
+
     .banner-home-form-wrapper {
         padding: 20px;
     }
@@ -105,9 +108,11 @@ body {
     .banner-home-text h1 {
         font-size: 2em;
     }
+
     .banner-home-text p {
         font-size: 0.9em;
     }
+
     .banner-home-form input {
         max-width: 100%;
     }
@@ -120,14 +125,12 @@ body {
     border-radius: 12px;
 }
 
-/* Estilo do container principal */
 .mission .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Conteúdo da seção missão */
 .mission-content {
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +139,6 @@ body {
     justify-content: space-between;
 }
 
-/* Estilo do texto da seção missão */
 .mission-text {
     flex: 1;
     max-width: 50%;
@@ -159,7 +161,6 @@ body {
     color: #fdfcfb;
 }
 
-/* Estilo da imagem na seção missão */
 .mission-image {
     flex: 1;
     max-width: 45%;
@@ -179,9 +180,11 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
     .mission-text {
         max-width: 100%;
     }
+
     .mission-image {
         max-width: 100%;
     }
@@ -191,6 +194,7 @@ body {
     .mission-text h2 {
         font-size: 2em;
     }
+
     .mission-text p {
         font-size: 1em;
     }
@@ -202,14 +206,12 @@ body {
     background-color: #ffffff;
 }
 
-/* Estilo do container principal */
 .impact .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estilo do título da seção */
 .impact h2 {
     text-align: center;
     font-size: 2.5em;
@@ -221,7 +223,6 @@ body {
     color: #f6a623;
 }
 
-/* Container das estatísticas de impacto */
 .impact-stats {
     display: flex;
     flex-wrap: wrap;
@@ -230,7 +231,6 @@ body {
     text-align: center;
 }
 
-/* Estilo individual de cada estatística */
 .stat {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -264,6 +264,7 @@ body {
         flex-direction: column;
         gap: 30px;
     }
+
     .stat {
         width: 100%;
         max-width: none;
@@ -274,10 +275,66 @@ body {
     .impact h2 {
         font-size: 2em;
     }
+
     .stat h3 {
         font-size: 1.5em;
     }
+
     .stat-description {
         font-size: 0.9em;
     }
+}
+
+/* Depoimentos em quadrados */
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-header {
+    margin-bottom: 10px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.testimonial-date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.testimonial-rating {
+    color: #f6a623;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.testimonial-text {
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
 }

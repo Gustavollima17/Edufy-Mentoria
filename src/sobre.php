@@ -69,47 +69,48 @@
     </section>
 
     <section class="testimonials">
-        <div class="container">
-            <h2>Depoimentos de nossos <span class="highlight">mentorados</span></h2>
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <div class="testimonial-header">
-                        <p class="testimonial-name">Gustavo Lima</p>
-                        <p class="testimonial-date">15 de janeiro de 2024</p>
-                    </div>
-                    <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
-                    <p class="testimonial-text">
-                        O SiriusProject me conectou com um mentor que realmente entendeu minhas necessidades e me ajudou a evoluir na minha carreira. Foi uma experiência incrível e transformadora!
-                    </p>
+    <div class="container">
+        <h2>Depoimentos de nossos <span class="highlight">mentorados</span></h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <p class="testimonial-name">Gustavo Lima</p>
+                    <p class="testimonial-date">15 de janeiro de 2024</p>
                 </div>
-                <div class="testimonial">
-                    <div class="testimonial-header">
-                        <p class="testimonial-name">Felipe Ferreira</p>
-                        <p class="testimonial-date">5 de dezembro de 2023</p>
-                    </div>
-                    <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
-                    <p class="testimonial-text">
-                        A mentoria que recebi foi essencial para meu desenvolvimento profissional. Eu aprendi e desenvolvi habilidades que foram super úteis no mercado de tecnologia. Super recomendo!
-                    </p>
+                <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                <p class="testimonial-text">
+                    O SiriusProject me conectou com um mentor que realmente entendeu minhas necessidades e me ajudou a evoluir na minha carreira. Foi uma experiência incrível e transformadora!
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <p class="testimonial-name">Felipe Ferreira</p>
+                    <p class="testimonial-date">5 de dezembro de 2023</p>
                 </div>
-                <div class="testimonial">
-                    <div class="testimonial-header">
-                        <p class="testimonial-name">Bruno de Souza</p>
-                        <p class="testimonial-date">28 de novembro de 2023</p>
-                    </div>
-                    <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
-                    <p class="testimonial-text">
-                        A experiência de mentor foi além do que eu esperava. Meu mentor foi guiado, se preocupou com meu desenvolvimento e me ajudou a entender mais. Muito obrigado pela conexão e a estrutura que têm no SiriusProject!
-                    </p>
+                <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                <p class="testimonial-text">
+                    A mentoria que recebi foi essencial para meu desenvolvimento profissional. Eu aprendi e desenvolvi habilidades que foram super úteis no mercado de tecnologia. Super recomendo!
+                </p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <p class="testimonial-name">Bruno de Souza</p>
+                    <p class="testimonial-date">28 de novembro de 2023</p>
                 </div>
+                <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+                <p class="testimonial-text">
+                    A experiência de mentor foi além do que eu esperava. Meu mentor foi guiado, se preocupou com meu desenvolvimento e me ajudou a entender mais. Muito obrigado pela conexão e a estrutura que têm no SiriusProject!
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Rodapé global -->
     <footer>
     <?php include 'footer.php'; ?>
     </footer>
-    
+
 </body>
 </html>
