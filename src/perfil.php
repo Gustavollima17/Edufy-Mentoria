@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
+<body>
     <!-- Cabeçalho global -->
-    <?php include 'header.php'; ?>
+    <header>
+        <?php include 'header.php'; ?>
+    </header>
 
     <!-- Conteúdo principal -->
     <main class="perfil-container">
-        <!-- Card do usuário -->
+        <!-- Perfil do Usuário -->
         <section class="perfil-card">
-            <div class="perfil-imagem">
-                <img id="user-image" src="https://via.placeholder.com/150" alt="Foto do usuário">
-            </div>
-            <div class="perfil-dados">
+            <figure class="perfil-imagem">
+                <!-- Imagem estática -->
+                <img id="user-image" src="https://cdn-icons-png.freepik.com/512/7816/7816987.png?ga=GA1.1.1066673407.1729179332" alt="Foto do usuário">
+            </figure>
+            <article class="perfil-dados">
                 <h1 id="user-name">Nome do Usuário</h1>
                 <p><strong>Data de nascimento:</strong> <span id="user-birth">01/01/2000</span></p>
                 <p><strong>CPF:</strong> <span id="user-cpf">000.000.000-00</span></p>
@@ -26,31 +30,33 @@
                 <p><strong>Telefone:</strong> <span id="user-phone">(00) 00000-0000</span></p>
                 <p><strong>Cidade:</strong> <span id="user-city">Cidade - Estado</span></p>
                 <p><strong>Eixo de ensino:</strong> <span id="user-area">Nenhum</span></p>
-            </div>
+            </article>
+        </section>
+
+        <!-- Botão de Deslogar -->
+        <section class="logout-container">
+            <button class="logout-btn" id="logout-btn">Deslogar da conta</button>
         </section>
 
         <!-- Estatísticas -->
         <section class="perfil-estatisticas">
-            <div class="stat">
+            <article class="stat">
                 <h2>Tutor desde</h2>
                 <p id="tutor-since">2023</p>
-            </div>
-            <div class="stat">
+            </article>
+            <article class="stat">
                 <h2>Aulas ministradas</h2>
                 <p id="lessons-taught">0</p>
-            </div>
+            </article>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 SiriusProject. Todos os direitos reservados.</p>
-            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
-        </div>
+    <!-- Rodapé global -->
+    <footer>
+        <?php include 'footer.php'; ?>
     </footer>
-    
 
-    <!-- JavaScript para preencher os dados -->
+    <!-- JavaScript -->
     <script>
         // Simulação de dados
         const userData = {
@@ -63,8 +69,7 @@
             city: "Chapadinha - Maranhão",
             area: "Enem e vestibulares",
             tutorSince: "2023",
-            lessonsTaught: 2455,
-            picture: "https://via.placeholder.com/150"
+            lessonsTaught: 2455
         };
 
         // Preenchendo os dados no perfil
@@ -79,7 +84,13 @@
             document.getElementById("user-area").textContent = userData.area;
             document.getElementById("tutor-since").textContent = userData.tutorSince;
             document.getElementById("lessons-taught").textContent = userData.lessonsTaught;
-            document.getElementById("user-image").src = userData.picture;
+        });
+
+        // Função para deslogar
+        document.getElementById("logout-btn").addEventListener("click", () => {
+            alert("Você foi deslogado.");
+            // Redirecionar para a página de login
+            window.location.href = "login.php";
         });
     </script>
 </body>

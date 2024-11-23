@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <header>
+        <?php include 'header.php'; ?>
+    </header>
 
     <section class="cadastro-section">
         <div class="cadastro-container">
@@ -99,7 +101,10 @@
         </div>
     </section>
 
+        <!-- Rodapé global -->
+    <footer>
     <?php include 'footer.php'; ?>
+    </footer>
 
     <script>
         function toggleFields(tipoConta) {
