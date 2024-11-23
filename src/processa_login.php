@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             // Redireciona para o painel apropriado
-            $redirectPage = $loginResult['data']['is_tutor'] ? "painel_tutor.php" : "painel_aluno.php";
+            $redirectPage = $loginResult['data']['is_tutor'] ? "perfil.php" : "perfil.php";
             header("Location: $redirectPage");
             exit();
         } else {
