@@ -40,7 +40,7 @@
 
         <!-- Botão de Deslogar -->
         <section class="logout-container">
-            <form action="logout.php" method="POST">
+            <form action="login.php" method="POST">
                 <button type="submit" class="logout-btn" id="logout-btn">Deslogar da conta</button>
             </form>
         </section>
