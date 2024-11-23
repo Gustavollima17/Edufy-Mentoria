@@ -1,12 +1,16 @@
 <?php
 require_once __DIR__ . '/config/database.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
     try {
         $pdo->beginTransaction();
         
         // Inserção na tabela usuario
-        $stmt = $pdo->prepare("INSERT INTO usuario (nome, dataNascimento, email, telefone, cpf, rua, cep, estado, cidade, senha) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        var_dump($_POST);
+        $stmt = $pdo->prepare("INSERT INTO usuario (nome, dataNascimento, email, telefone, cpf, rua, cep, estado, cidade, senha) VALUES (tes, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        var_dump($pdo);
+       
         
         $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
         
