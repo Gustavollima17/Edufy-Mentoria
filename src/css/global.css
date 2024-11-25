@@ -80,11 +80,11 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
     margin-left: -80px;
     border-radius: 0 5px 5px 0;
 }
+
 .cadastro-btn:hover {
     background-color: #ffffff;
     color: #fff;
 }
-
 
 /* FOOTER */
 footer {
@@ -131,7 +131,6 @@ footer nav {
     margin: 20px 0;
 }
 
-
 footer nav ul {
     list-style: none;
     padding: 0;
@@ -158,9 +157,7 @@ footer nav ul li a {
 footer nav ul li a:hover {
     background-color: #f5a623;
     color: #222;
-    
 }
-
 
 footer .social-icons {
     display: flex;
@@ -179,21 +176,59 @@ footer .social-icons a:hover {
     color: #00bcd4;
 }
 
-@media (min-width: 768px) {
-    footer .container {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    .nav ul {
+        gap: 40px; /* Diminui o espaçamento entre os links no menu */
     }
 
-    footer ul {
-        margin-top: 0;
+    .btn-login, .cadastro-btn {
+        font-size: 0.9em; /* Ajusta o tamanho das fontes nos botões */
+    }
+
+    footer nav ul {
+        gap: 15px; /* Ajusta o espaçamento entre os links no rodapé */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Alinha os elementos verticalmente no header */
+        align-items: center;
+    }
+
+    .nav ul {
+        flex-direction: column; /* Torna o menu vertical */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn-login, .cadastro-btn {
+        width: 100%; /* Faz com que os botões ocupem toda a largura */
+        text-align: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer nav ul {
+        flex-direction: column; /* Deixa os links no rodapé em formato vertical */
     }
 }
 
 @media (max-width: 480px) {
-    footer ul {
-        flex-direction: column;
-        align-items: center;
+    .logo img {
+        max-width: 80px; /* Diminui o tamanho do logo em telas menores */
+    }
+
+    footer nav ul {
+        flex-direction: column; /* Links do rodapé alinhados verticalmente */
+    }
+
+    footer .social-icons {
+        flex-wrap: wrap; /* Permite que os ícones sociais quebrem linha */
+        gap: 10px;
     }
 }
