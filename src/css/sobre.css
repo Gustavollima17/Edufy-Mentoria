@@ -90,6 +90,8 @@ body {
 .banner-home-form .btn:hover {
     background-color: #000000;
     color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* RESPONSIVE STYLES FOR BANNER-HOME */
@@ -383,3 +385,4 @@ section.testimonials {
         padding: 15px; /* Ajusta ainda mais o espaçamento em telas menores */
     }
 }
+
