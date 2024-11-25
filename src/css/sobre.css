@@ -82,8 +82,8 @@ body {
 }
 
 .banner-home-form .btn:hover {
-    background-color: #4ca2ff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -223,6 +223,45 @@ body {
     color: #f6a623;
 }
 
+/* Botões de alternância estilizados */
+.impact-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background-color: #f6a623; /* Cor de fundo inicial */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.toggle-btn.active {
+    background-color: #000000; /* Cor de fundo quando ativo */
+    transform: scale(1.1); /* Ligeiro aumento ao ser ativado */
+    color: #ffffff;
+}
+
+.toggle-btn:hover {
+    background-color: #333; /* Cor ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+    transform: scale(1.05); /* Efeito hover */
+}
+
+/* Botões em dispositivos menores */
+@media (max-width: 768px) {
+    .toggle-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
 .impact-stats {
     display: flex;
     flex-wrap: wrap;
@@ -337,4 +376,27 @@ body {
     color: #333;
     line-height: 1.5;
     text-align: justify;
+}
+/* Fundo translúcido para o formulário na seção Junte-se a nós */
+.form-background {
+    position: relative; /* Garante que o fundo do formulário seja posicionado corretamente */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+    max-width: 500px; /* Define uma largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Responsividade para formulários em dispositivos menores */
+@media (max-width: 768px) {
+    .form-background {
+        padding: 20px; /* Reduz o espaçamento interno em dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-background {
+        padding: 15px; /* Ajusta ainda mais o espaçamento em telas menores */
+    }
 }

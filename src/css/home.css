@@ -96,8 +96,8 @@ body {
 
 
 .hero .btn.saiba-mais:hover {
-    background-color: #f5a623;
-    color: #ffffff;;
+    background-color: #000000;
+    color: #f5a623;;
     scale: 1.1;
     transform: scale(1.1);
 }
