@@ -1,6 +1,4 @@
-Aqui está a documentação atualizada com as tecnologias corretas:
 
----
 
 # Edufy-Mentoria
 
