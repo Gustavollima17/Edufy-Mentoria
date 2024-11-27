@@ -125,20 +125,20 @@ body {
     }
 }
 
-/* MISSION SECTION */
 .mission {
     padding: 50px 0;
     background-color: #e6951e;
     border-radius: 12px;
-    margin-bottom: 60px; /* Adiciona mais espaço entre missão e a próxima seção */
 }
 
+/* Estilo do container principal */
 .mission .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Conteúdo da seção missão */
 .mission-content {
     display: flex;
     flex-wrap: wrap;
@@ -147,6 +147,7 @@ body {
     justify-content: space-between;
 }
 
+/* Estilo do texto da seção missão */
 .mission-text {
     flex: 1;
     max-width: 50%;
@@ -169,6 +170,7 @@ body {
     color: #fdfcfb;
 }
 
+/* Estilo da imagem na seção missão */
 .mission-image {
     flex: 1;
     max-width: 45%;
@@ -182,23 +184,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
-
-/* RESPONSIVE STYLES FOR MISSION */
-@media (max-width: 768px) {
-    .mission-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .mission-text {
-        max-width: 100%;
-    }
-
-    .mission-image {
-        max-width: 100%;
-    }
-}
-
 @media (max-width: 480px) {
     .mission-text h2 {
         font-size: 2em;
@@ -211,11 +196,18 @@ body {
 
 /* IMPACT SECTION */
 section.impact {
-    background-color: #dbdbdb;
-    padding: 60px 20px;
+    background-color: #dbdbdb; /* Fundo claro */
+    padding: 100px 20px;
     text-align: center;
+    font-family: Arial, sans-serif;
     border-radius: 10px;
-    margin-bottom: 60px; /* Aumente este valor para mais espaço entre as seções */
+}
+section.impact .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Garante que o conteúdo fique empilhado verticalmente */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
 }
 
 
@@ -292,32 +284,35 @@ section.impact .stat-description {
 
 .toggle-btn.active {
     background-color: #000000;
-    transform: scale(1.1);
     color: #ffffff;
 }
 
 .toggle-btn:hover {
     background-color: #333;
     color: #ffffff;
-    transform: scale(1.05);
+    scale: 3s;
+    scale: 1.1;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 /* TESTIMONIALS SECTION */
 section.testimonials {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #dbdbdb;
     text-align: center;
     border-radius: 10px;
-    margin-top: 60px; /* Adiciona espaço acima da seção de Depoimentos */
+    font-family: Arial, sans-serif;
 }
 
 
 .testimonials .container {
     max-width: 1200px;
+    border-radius: 10px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Garante que o conteúdo fique empilhado verticalmente */
+    align-items: center; 
 }
 
 .testimonials h2 {
@@ -327,7 +322,7 @@ section.testimonials {
 }
 
 .testimonials .highlight {
-    color: #007BFF;
+    color: #f6a623;
     font-weight: bold;
 }
 

@@ -14,45 +14,45 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
     padding: 0 20px;
 }
 
-/* HEADER */
+/* Estilos gerais do header (desktop por padrão) */
 .header {
     background-color: #fff;
     padding: 5px;
-    border-bottom: 0px solid #f0f0f0;
-}
-
-.container {
-    width: 90%;
+    border-bottom: 2px solid #efefef;
+  }
+  
+  .container {
+    width: 98%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo img {
-    max-width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Manter a proporção */
-}
-
-.nav ul {
+  }
+  
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .nav ul {
     list-style: none;
     display: flex;
     gap: 80px;
-}
-
-.nav ul li a {
+  }
+  
+  .nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-.nav ul li a:hover {
+  }
+  
+  .nav ul li a:hover {
     color: #f5a623;
-}
-
-.btn-login, .cadastro-btn {
+  }
+  
+  .btn-login, .cadastro-btn {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -80,11 +80,50 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
     margin-left: -80px;
     border-radius: 0 5px 5px 0;
 }
-
 .cadastro-btn:hover {
     background-color: #ffffff;
     color: #fff;
 }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) { /* Para iPad Air ou telas médias */
+    .nav ul {
+      gap: 40px;
+    }
+    .logo img {
+      max-width: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Para iPhone XR e telas pequenas */
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+  
+    .btn-login,
+    .cadastro-btn {
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Para telas muito pequenas */
+    .nav ul {
+      gap: 10px;
+    }
+    .logo img {
+      max-width: 60px;
+    }
+  }
+  
 
 /* FOOTER */
 footer {
@@ -131,6 +170,7 @@ footer nav {
     margin: 20px 0;
 }
 
+
 footer nav ul {
     list-style: none;
     padding: 0;
@@ -157,7 +197,9 @@ footer nav ul li a {
 footer nav ul li a:hover {
     background-color: #f5a623;
     color: #222;
+    
 }
+
 
 footer .social-icons {
     display: flex;
@@ -176,59 +218,21 @@ footer .social-icons a:hover {
     color: #00bcd4;
 }
 
-/* RESPONSIVE STYLES */
-@media (max-width: 1024px) {
-    .nav ul {
-        gap: 40px; /* Diminui o espaçamento entre os links no menu */
-    }
-
-    .btn-login, .cadastro-btn {
-        font-size: 0.9em; /* Ajusta o tamanho das fontes nos botões */
-    }
-
-    footer nav ul {
-        gap: 15px; /* Ajusta o espaçamento entre os links no rodapé */
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Alinha os elementos verticalmente no header */
-        align-items: center;
-    }
-
-    .nav ul {
-        flex-direction: column; /* Torna o menu vertical */
-        align-items: center;
-        gap: 20px;
-    }
-
-    .btn-login, .cadastro-btn {
-        width: 100%; /* Faz com que os botões ocupem toda a largura */
-        text-align: center;
-    }
-
+@media (min-width: 768px) {
     footer .container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
     }
 
-    footer nav ul {
-        flex-direction: column; /* Deixa os links no rodapé em formato vertical */
+    footer ul {
+        margin-top: 0;
     }
 }
 
 @media (max-width: 480px) {
-    .logo img {
-        max-width: 80px; /* Diminui o tamanho do logo em telas menores */
-    }
-
-    footer nav ul {
-        flex-direction: column; /* Links do rodapé alinhados verticalmente */
-    }
-
-    footer .social-icons {
-        flex-wrap: wrap; /* Permite que os ícones sociais quebrem linha */
-        gap: 10px;
+    footer ul {
+        flex-direction: column;
+        align-items: center;
     }
 }

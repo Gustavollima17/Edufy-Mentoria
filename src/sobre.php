@@ -30,7 +30,7 @@
             </div>
         </div>
     </section>
-
+<br>
     <section class="mission">
         <div class="container">
             <div class="mission-content">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </section>
-
+    <br>
     <section class="impact">
         <div class="container">
             <h2>Nosso <span class="highlight">Impacto</span></h2>
@@ -95,7 +95,7 @@
             </div>
         </div>
     </section>
-
+<br>
     <section class="testimonials">
         <div class="container">
             <h2>Depoimentos de nossos <span class="highlight">mentorados</span></h2>
@@ -133,12 +133,12 @@
             </div>
         </div>
     </section>
-
+    <br>
     <!-- Rodapé global -->
     <footer>
         <?php include 'footer.php'; ?>
     </footer>
-
+<br>
     <script>
         const tableSection = document.getElementById('table-section');
         const graphSection = document.getElementById('graph-section');

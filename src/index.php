@@ -12,7 +12,7 @@
         <?php include 'header.php'; ?>
     </header>
     
-        <section class="hero" style="background: url('https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg') no-repeat center center/cover;">
+        <section class="hero" style="background: url('https://images.pexels.com/photos/6147369/pexels-photo-6147369.jpeg?cs=srgb&dl=pexels-keira-burton-6147369.jpg&fm=jpg') no-repeat center center/cover;">
             <div class="container">
                 <div class="hero-text">
                     <h1>Acelere com <span class="highlight">mentoria</span></h1>

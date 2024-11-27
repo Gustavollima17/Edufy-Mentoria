@@ -18,24 +18,26 @@
         <div class="cadastro-container">
             <h2>Cadastre-se</h2>
             <p>Escolha o tipo de conta</p>
+            <br>
             <!-- Seleção do tipo de conta -->
             <div class="options-container">
                 <div class="option">
                     <label for="aluno">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3413/3413591.png" alt="Aluno" class="form-image">
+                        <img src="https://www.censupeg.com.br/academy/files/icone-alunos.png" alt="Aluno" class="form-image">
                         <br>Aluno
                         <input type="radio" name="tipoConta" id="aluno" onclick="toggleFields('aluno')" required>
                     </label>
                 </div>
                 <div class="option">
                     <label for="tutor">
-                        <img src="https://www.freeiconspng.com/thumbs/training-icon/leadership-training-icon-1.png" alt="Tutor" class="form-image">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2262/2262227.png" alt="Tutor" class="form-image">
                         <br>Tutor
                         <input type="radio" name="tipoConta" id="tutor" onclick="toggleFields('tutor')" required>
                     </label>
                 </div>
             </div>
             <p>Preencha os dados abaixo</p>
+            <br>
 
             <form id="cadastroForm" action="processa_cadastro.php" method="POST" onsubmit="return validateForm()">
                 <input type="hidden" name="tipoConta" id="tipoContaHidden" value="">
@@ -96,15 +98,17 @@
                 <div>
                     <input type="checkbox" id="termos" required> Concordo com os <a href="#">Termos de Uso</a>
                 </div>
+                <br>
                 <button type="submit" class="submit-btn">Cadastrar-se</button>
             </form>
         </div>
     </section>
-
+<br>
         <!-- Rodapé global -->
     <footer>
     <?php include 'footer.php'; ?>
     </footer>
+    <br>
 
     <script>
         function toggleFields(tipoConta) {

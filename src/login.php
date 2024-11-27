@@ -20,7 +20,7 @@ session_start();
         <?php include 'header.php'; ?>
     </header>
 
-    <main class="login-main" style="background: url('https://www.pucpr.br/wp-content/uploads/pucpr/2022/08/foto-buddy-1024x684.jpg') no-repeat center center/cover;">
+    <main class="login-main" style="background: url('https://neon.com.br/aprenda/wp-content/uploads/2023/08/quanto-custa-faculdade-administracao-1024x542.png') no-repeat center center/cover;">
         <div class="login-container">
             <h1>Login</h1>
             <?php
@@ -55,11 +55,12 @@ session_start();
             <p class="signup-link">Ainda não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
         </div>
     </main>
-
+    <br>
     <!-- Rodapé global -->
     <footer>
     <?php include 'footer.php'; ?>
     </footer>
+    <br>
 
     <script>
         function validarFormulario() {
